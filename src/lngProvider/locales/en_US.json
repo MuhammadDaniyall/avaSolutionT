@@ -1,0 +1,18 @@
+{
+  "app.announced": "A new version will be released on December 25th. Stay tuned!",
+  "sidebar.main": "Main",
+  "sidebar.dashboard": "Dashboard",
+  "sidebar.category": "Category",
+  "sidebar.books": "Books",
+  "sidebar.books.upload": "Upload",
+  "sidebar.books.list": "List",
+  "sidebar.profile": "Profile",
+  "app.userAuth.signInWith": "Sign In With",
+  "app.userAuth.remember": "Remember me",
+  "app.userAuth.forgot": "Forgot password?",
+  "app.userAuth.signIn": "Sign In",
+  "app.userAuth.signUp": "Sign Up",
+  "app.userAuth.google": "Continue with Google",
+  "app.userAuth.facebook": "Continue with Facebook",
+  "app.userAuth.signInFooter": "Do not have an account?"
+}

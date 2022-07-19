@@ -1,0 +1,105 @@
+.tasks__table {
+  position: relative;
+
+  & .ant-table-pagination.ant-pagination {
+    margin: 30px 0 0 0;
+  }
+
+  & .tasks__status-wrapper {
+    position: absolute;
+    bottom  : 18px;
+    right   : 30px;
+  }
+}
+.ava-task-content{
+  height: 100%;
+  & .content-form__header{
+    padding-top: 10px;
+  }
+  & .ant-card-hoverable:hover{
+    border-color: transparent;
+    box-shadow: 4px 6px 10px #0000009e; 
+  }
+   & .tasks__content-form{
+     & .ant-btn:not(:last-child) {
+          margin-right: 5px;
+      }
+    & .content-form__form{
+      max-height: 750px;
+      min-height: 750px;
+      overflow: scroll;
+      background-color: #8c8c8c87   !important;
+      border: 2px solid #929292;
+      & .ant-card{
+        & .ant-layout-sider{
+          text-align: right;
+          background: none !important;
+        }
+      }
+  
+    }
+    & .content-form__form::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+}
+.ant-select-selection-item{
+  & .ava_task_modal_avatar{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  & .ant-avatar-circle{
+    width: 16px;
+    height: 16px;
+    justify-content: center;
+    align-items: center;
+    & .ant-avatar-string{
+      padding: 0;
+      font-size: 18px;
+      height: 100%;
+      width: 100%;
+      line-height: 16px;
+    }
+  }
+}
+.ava_task_description{
+  & .ant-modal-body{
+    & .ant-row{
+      & .ant-card-hoverable{
+        border: 1px solid #8080808f;
+        & .ant-layout-sider{
+          text-align: right;
+          background: none !important;
+        }
+      }
+      & .ant-card-hoverable:hover{
+        border-color: transparent;
+        box-shadow: 3px 3px 8px #0000009e; 
+      }
+      
+    }
+  }
+}
+& .ant-card{
+  & .ant-layout-sider{
+    text-align: right;
+    background: none !important;
+  }
+}
+.ant-select-item-option {
+  & .ant-avatar-circle{
+    width: 16px;
+    height: 16px;
+    justify-content: center;
+    align-items: center;
+    & .ant-avatar-string{
+      padding: 0;
+      font-size: 18px;
+      height: 100%;
+      width: 100%;
+      line-height: 16px;
+    }
+  }
+}

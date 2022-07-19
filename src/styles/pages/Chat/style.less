@@ -1,0 +1,258 @@
+.chat__content-form {
+    font-family: "Public Sans",sans-serif;
+    height: 100%;
+    border-radius: 3px;
+    border: 1px solid rgb(207, 207, 207);
+    background-color :#ffffff;
+    & .chat_pannel{
+        height: 100%;
+        margin-left: 0;
+        display: flex;  
+        & .scroll-down-button{
+            position: absolute;
+            bottom: 113px;
+            right: 38px;
+        }
+        
+        & .user_pannel::-webkit-scrollbar {
+            display: none;
+        }
+        & .user_pannel{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-self: stretch;
+            border-width: 0px 1px 0px 0px;
+            max-width: 380px;
+            min-width: 380px;
+            border-style: solid;
+            border-color: rgb(213, 217, 222);
+            background-color: #f5f7fb;
+            width: 322px;
+            flex-grow: 1;
+            flex-shrink: 1;
+            overflow: scroll;
+            height: 100%;
+            align-items: stretch;
+            padding-left: .5rem !important;
+            padding-right: .5rem !important;
+            & .selected{
+                background-color: #e6ebf5;
+            }
+            & .chat_users{
+                padding: 15px 20px;
+                cursor: pointer;
+                height: 74px;
+                position: relative;
+                transition: all .4s;
+                border-top: 1px solid #f5f7fb;
+                border-radius: 4px;
+                opacity: 1;
+                margin: 0 !important;
+                & .avatar__badge{
+                    margin-right: 1rem !important;
+                    & .ant-avatar{
+                        width: 2.2rem;
+                        height: 2.2rem;
+                    }
+                    & .ant-badge-dot{
+                        top: 30px;
+                        right: 5px;
+                    }
+                }
+                & .user_info{
+                    & h5{
+                        font-size: 15px;
+                        margin-bottom: 0.25rem !important;
+                    }
+                    width: 14.25rem;
+                }
+                & .last_chat_time{
+                    font-size: 11px!important;
+                }
+            }
+            & .chat_users:hover{
+                background-color: #e6ebf5;
+            }
+            & .user_search{
+                height: 45px;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                & .ant-input{
+                    background-color: #e6ebf5;
+                    & input{
+                        background-color: #e6ebf5;
+
+                    }
+                }
+            }
+        }
+    }
+    & .messages{
+        overflow: scroll;
+        height: 100%    ;
+        & .ant-row{
+            margin: 0px !important;
+            align-items: flex-end;
+            & .ant-avatar .left{
+                margin-right: 10px;
+            } 
+            & .ant-avatar .right{
+                margin-left: 10px;
+            } 
+            & .message-box-left{
+                & div{
+                    text-align: right;
+                    margin-left: 10px;
+                    padding: 12px 20px;
+                    background-color: #7269ef;
+                    border-radius: 8px 8px 8px 0;
+                    position: relative;
+                    margin-bottom: 10px;
+                    color: #fff;
+                    & pre{
+                        margin-bottom: 4px;
+                        color: #fff;
+                        font-weight: 600;
+                    }
+                }
+                & div::before{
+                    content: "";
+                    position: absolute;
+                    border: 5px solid transparent;
+                    border-left-color: #7269ef;
+                    border-top-color: #7269ef;
+                    left: 0;
+                    right: auto;
+                    bottom: -10px;
+                }
+                & .user_name{
+                    font-size: 14px;
+                    font-weight: 500;
+                    margin: 10px;
+                }
+                & .message_time{    
+                    font-size: 12px;
+                    color: rgba(255,255,255,.5);
+                }
+            }
+            & .message-box-right{
+                & .message_time{
+                    font-size: 12px;
+                    color: #7a7f9a;
+                }
+                text-align: right;
+                & div{
+                    text-align: left;
+                    margin-right: 10px;
+                    padding: 12px 20px;
+                    background-color: #d0e0f1;
+                    border-radius: 8px 8px 0px 8px;
+                    color: #464646;
+                    position: relative;
+                    margin-bottom: 10px;
+                    & pre{
+                        color: #343a40;
+                        font-weight: 600;
+                        margin-bottom: 4px;
+                    }
+                }
+                & div::before{
+                    content: "";
+                    position: absolute;
+                    border: 5px solid transparent;
+                    border-top-color: #d0e0f1;
+                    border-right-color: #d0e0f1;
+                    left: auto;
+                    right: 0;
+                    bottom: -10px;
+                }
+                & .user_name{
+                    font-size: 14px;
+                    font-weight: 500;
+                    margin: 10px;
+                }
+            }
+        }
+        & header{
+            padding: 1.5rem !important;
+            height: auto;
+            border-bottom: 1px solid #f0eff5;
+            & .ant-row{
+                width: 100%;
+                & .user{
+                    display: flex;
+                    align-items: center;
+                    & span{
+                        margin-right: 1rem;
+                    }
+                    & .green__badge{
+                        background: #44d060;
+                        height: 13px;
+                        width: 13px;
+                        border-radius: 50%;
+                        margin: 0px 10px;
+                    }
+                    & .orange__badge{
+                        background: #ffb100;
+                        height: 13px;
+                        width: 13px;
+                        border-radius: 50%;
+                        margin: 0px 10px;
+                    }
+                }
+            }
+        }
+        & main {
+            padding:1.5rem!important;
+            padding-right: 4rem !important;
+            & .welcome{
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                text-align: center;
+                display: flex;
+                align-items: center;
+            }
+        }
+        & footer{
+            & .send_message_sector{
+                width: 100%;
+                position: absolute;
+                bottom: 0px;
+                height: 60px;
+                & .input{
+                    width: calc(100% - 200px);
+                    & .message_input {
+                        height: 45px;
+                        background-color: #e6ebf5!important;
+                        color: #495057;
+                        & input {
+                            background: none;
+                        }
+                        & span{
+                            cursor: pointer;
+                            margin-right: 15px;
+                            font-size: 24px;
+                        }
+                    }
+                }
+                & .additional_feature{
+                    cursor: pointer;
+                    width: 45px;
+                    height: 45px;
+                    justify-content: center;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    background-color: #f1f1f4;
+                    border-radius: 5px;
+                }
+                & .additional_feature:hover{
+                    background-color: #c0c0c0;
+                }
+            }
+            border:none;
+        }
+    }
+}
