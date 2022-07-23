@@ -43,7 +43,7 @@ const UserScreen = (props) => {
   const initialData = async () => {
     // await props.getField(user.id)
     // await getUsers(user.id);
-    await getAllUsers();
+    //await getAllUsers();
   };
 
   const columns = [
