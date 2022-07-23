@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Table, Tooltip, Space, Button, Modal, Typography } from 'antd';
 import { connect } from 'react-redux';
 import { UserAddOutlined } from '@ant-design/icons';
-import {FaUserEdit} from 'react-icons/fa'
-import{HiOutlineMail} from 'react-icons/hi'
-import {IoMdPersonAdd} from 'react-icons/io'
+import { FaUserEdit } from 'react-icons/fa'
+import { HiOutlineMail } from 'react-icons/hi'
+import { IoMdPersonAdd } from 'react-icons/io'
 import moment from 'moment';
 import {
   getUsers,
@@ -17,7 +17,7 @@ import {
 
 import {
   getField
-}from "../../appRedux/actions/Settings"
+} from "../../appRedux/actions/Settings"
 
 import UserModal from '../../components/Users/UserModal';
 import AvatarWithName from '../../components/common/AvatarWithName';
@@ -57,7 +57,7 @@ const UserScreen = (props) => {
       width: '20%',
       render: (text) => (
         <div className={'table-cell-avatar__name'}>
-       
+
 
           <AvatarWithName name={text} />
           &nbsp;&nbsp;
@@ -75,7 +75,7 @@ const UserScreen = (props) => {
       dataIndex: 'phone',
       width: '10%',
     },
-    
+
     // {
     //   title: 'Add to Waitlist',
     //   dataIndex: '',
@@ -91,14 +91,14 @@ const UserScreen = (props) => {
       dataIndex: '',
       width: '10%',
       render: (row) => (
-        <Button style={{backgroundColor:"#008080",color:"white"}} shape='circle' onClick={() => {SendEmail(row.id)}}>
-<HiOutlineMail size={15}/>        </Button>
+        <Button style={{ backgroundColor: "#008080", color: "white" }} shape='circle' onClick={() => { SendEmail(row.id) }}>
+          <HiOutlineMail size={15} />        </Button>
       ),
     },
     {
       title: 'Actions',
       dataIndex: '',
-      
+
       render: (text, row) => (
         <Space size={15}>
           <Tooltip title="Edit" color={'#fff'}>
@@ -106,7 +106,7 @@ const UserScreen = (props) => {
               className={'content-form__circle__button gx-bg-secondary gx-border-secondary'}
               type="default"
               shape="circle"
-              icon={<FaUserEdit/>}
+              icon={<FaUserEdit />}
               onClick={() => openModal(row)}
             />
           </Tooltip>
@@ -172,27 +172,27 @@ const UserScreen = (props) => {
       <div className={'content-form__header'}>
         <Title level={4}></Title>
         <Tooltip title="Add New User" color={'#fff'}>
-        <Button  style={{color:'#e6fffb',backgroundColor:"#6495ED"}} shape='square'  onClick={() => openModal(null)} 
-        icon={<UserAddOutlined />}>
-        </Button>
+          <Button style={{ color: '#e6fffb', backgroundColor: "#6495ED" }} shape='square' onClick={() => openModal(null)}
+            icon={<UserAddOutlined />}>
+          </Button>
         </Tooltip>
       </div>
       <div className={'content-form__form'}>
         <div className={'User__table gx-table-responsive'}>
-        <Table
-    columns={columns}
-    expandable={{
-      expandedRowRender: record => <p style={{ margin: 0,paddingLeft:"8%" }}><span style={{fontWeight:500}}>Description :</span> {record.description}</p>,
-      rowExpandable: record => record.description !== null ,
-    }}
-    rowKey="id"
-    dataSource={userData}
-    pagination={{ position: ['bottomLeft'], pageSize: 5 }}
-  />
+          <Table
+            columns={columns}
+            expandable={{
+              expandedRowRender: record => <p style={{ margin: 0, paddingLeft: "8%" }}><span style={{ fontWeight: 500 }}>Description :</span> {record.description}</p>,
+              rowExpandable: record => record.description !== null,
+            }}
+            rowKey="id"
+            dataSource={userData}
+            pagination={{ position: ['bottomLeft'], pageSize: 5 }}
+          />
         </div>
       </div>
       {/* {console.log(formdata)} */}
- 
+
       <UserModal
         title={modalTitle}
         state={modalState}
