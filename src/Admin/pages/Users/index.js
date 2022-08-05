@@ -29,6 +29,19 @@ import InformationOutline from '@2fd/ant-design-icons/lib/InformationOutline';
 const { confirm } = Modal;
 const { Title } = Typography;
 
+const handleDelete = (id) => {
+  confirm({
+    title: 'Are you sure you want to delete this user?',
+    icon: <InformationOutline />,
+    okText: 'Yes',
+    okType: 'danger',
+    cancelText: 'No',
+    async onOk() {
+      await deleteUser(id);
+    },
+  });
+};
+
 const UserScreen = (props) => {
   const [visible, setVisible] = useState(false);
   const [modalState, setModalState] = useState(false);
@@ -124,18 +137,7 @@ const UserScreen = (props) => {
     },
   ];
 
-  const handleDelete = (id) => {
-    confirm({
-      title: 'Are you sure you want to delete this user?',
-      icon: <InformationOutline />,
-      okText: 'Yes',
-      okType: 'danger',
-      cancelText: 'No',
-      async onOk() {
-        await deleteUser(id);
-      },
-    });
-  };
+
 
   const openModal = (values) => {
     console.log(values);
